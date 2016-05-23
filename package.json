@@ -1,0 +1,33 @@
+{
+  "name": "pamphlet",
+  "version": "1.0.0",
+  "description": "throw away pamphlet with a click !",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ad",
+    "online"
+  ],
+  "author": "Shashi Khanal",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "bcrypt": "^0.8.6",
+    "body-parser": "^1.15.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^1.2.0",
+    "cookie-parser": "^1.4.2",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.1.19",
+    "mongoose": "^4.4.17",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "querystring": "^0.2.0"
+  }
+}

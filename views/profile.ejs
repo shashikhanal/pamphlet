@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <title>PAMPHLET - Profile</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    
+    <style>
+        body        { padding-top:80px; }
+    </style>
+</head>
+<body ng-app="app">
+<div class="container">
+
+    <div class="jumbotron">
+        <h2>Welcome 
+        <% if (user.facebook.token) { %>
+                <%= user.facebook.name %>
+        <% } %>
+        </h2>
+        <div>Account details:
+            <% if (user.facebook.token) { %>
+            <p>
+                id: <%= user.facebook.id %><br>
+                name: <%= user.facebook.name %><br>
+                email: <%= user.facebook.email %>
+            </p>
+            <% } %>
+        </div>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a></br></br>
+        <h2>My posts</h2>
+        <form method="post" action="/upload">
+            <h4>Upload ad</br></h4>
+            <textarea name="adText" rows="4" cols="50" placeholder="Enter text here.."></textarea></br>
+            <input class="btn btn-default" type="submit" value="Submit">
+        </form>
+    </div>
+    <% if (ad.length > 0) { %>
+        <div class="jumbotron text-center">
+            Ad detail: <%= ad %>
+                <% for(i in ad){ %>
+                <%=  ad.i  %>
+                 <%   } %>
+             <br>
+        </div>
+    <% } %>
+    
+</div>
+</body>
+</html>
